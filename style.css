@@ -29,15 +29,6 @@ h1 {
   padding-bottom: 0.5em;
 }
 
-@keyframes slideInFromLeft {
-  0% {
-    transform: translateX(-100%);
-  }
-  100% {
-    transform: translateX(0);
-  }
-}
-
 header {
   height: 100px;
   display: flex;
@@ -184,6 +175,15 @@ section:nth-child(even) {
 }
 
 /* Skills */
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
 .skills {
   text-align: center;
 }
@@ -227,6 +227,7 @@ section:nth-child(even) {
   height: 100%;
 }
 
+.php,
 .js {
   width: 90%;
 }
@@ -237,6 +238,13 @@ section:nth-child(even) {
 
 .react {
   width: 75%;
+}
+
+.sass,
+.drupal,
+.symfony,
+.node {
+  width: 50%;
 }
 
 /* Footer */
@@ -279,6 +287,11 @@ footer fieldset textarea {
   height: 100px;
   min-height: fit-content;
 }
+
+form {
+  margin-bottom: 4em;
+}
+
 .btn-message {
   display: inline-block;
   padding: 1em 2em;
@@ -292,6 +305,14 @@ footer fieldset textarea {
 
 .btn-message:hover {
   cursor: pointer;
+}
+
+.copyright {
+  font-size: 0.8em;
+}
+
+p.copyright {
+  color: var(--light-slate-gray);
 }
 
 .validation {
