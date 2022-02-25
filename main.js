@@ -5,6 +5,8 @@ const nav = document.querySelector('nav');
 let links = document.querySelectorAll('nav ul li a');
 const heroBanner = document.querySelector('.hero-banner');
 
+console.log(links);
+
 window.onscroll = function () {
   scrollFunction();
 };
@@ -27,7 +29,7 @@ const getToTop = () => {
 
 // Toggle between nav for mobile and web
 const openMenu = () => {
-  for (let i = 0; i < links.lingth; i++) {
+  for (let i = 0; i < links.length; i++) {
     console.log(`Link ${links[i]} got assigned event listener.`);
     links[i].addEventListener('click', openMenu);
   }

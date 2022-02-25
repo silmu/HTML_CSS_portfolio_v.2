@@ -45,8 +45,13 @@ header {
 
 #logo {
   font-family: 'JetBrains Mono', monospace;
-  font-size: 1.5em;
+  font-size: 1.2em;
   min-width: fit-content;
+}
+
+.logo-name {
+  display: inline-block;
+  margin-left: 5px;
 }
 
 .fa-user-astronaut {
@@ -60,12 +65,7 @@ nav ul {
 
 nav ul li {
   display: inline-block;
-  padding: 1em;
-}
-
-section:before {
-  border-top: 5px solid var(--gray-blue) !important;
-  width: 100%;
+  padding: 0.5em;
 }
 
 .hero-banner {
@@ -102,7 +102,7 @@ main {
 }
 
 section {
-  padding: 2em;
+  padding: 1em;
 }
 
 /* Heading decoartions */
@@ -134,7 +134,7 @@ section:nth-child(even) {
   min-height: 200px;
   min-width: 200px;
   background-color: #fff;
-  margin: 1em;
+  margin: 0.5em;
   padding: 1em;
   border: 1px solid lightgrey;
   border-radius: 5px;
@@ -353,6 +353,14 @@ p.copyright {
     width: 100%;
   }
 
+  .logo-name {
+    display: none;
+  }
+
+  #logo {
+    font-size: 1.5em;
+  }
+
   .project {
     width: 70vw;
     height: 250px;
@@ -375,6 +383,10 @@ p.copyright {
     color: white;
   }
 
+  #menu:hover {
+    cursor: pointer;
+  }
+
   nav ul {
     display: none;
   }
@@ -391,8 +403,20 @@ p.copyright {
   nav.responsive ul li {
     display: block;
   }
+
   nav.responsive a {
-    color: #333;
+    color: black;
     display: block;
+    padding: 1em;
+  }
+
+  nav.responsive::after {
+    width: 100%;
+    height: 100px;
+    background-color: white;
+  }
+
+  nav.responsive a:hover {
+    background-color: var(--gray-blue);
   }
 }
