@@ -45,20 +45,36 @@ header {
   top: 0;
   padding: 20px;
   color: #fff;
-  background-color: black;
+  background-color: rgba(1, 0, 20, 0.8);
+  backdrop-filter: blur(6px);
   align-items: center;
   justify-content: space-between;
   z-index: 1;
 }
 
 #logo {
+  font-family: 'JetBrains Mono', monospace;
   font-size: 1.5em;
-  font-weight: bold;
+  min-width: fit-content;
+}
+
+.fa-user-astronaut {
+  display: inline-block;
+  font-size: 1.5em;
+}
+
+nav ul {
+  text-align: right;
 }
 
 nav ul li {
   display: inline-block;
   padding: 1em;
+}
+
+section:before {
+  border-top: 5px solid var(--gray-blue) !important;
+  width: 100%;
 }
 
 .hero-banner {
@@ -85,7 +101,8 @@ nav ul li {
 .overlay-selector.hero-banner:before {
   content: '';
   height: 80vh;
-  background-color: rgb(0, 0, 0, 0.5);
+  background-color: rgba(1, 0, 20, 0.3);
+  backdrop-filter: blur(3px);
   display: block;
 }
 
@@ -95,6 +112,17 @@ main {
 
 section {
   padding: 2em;
+}
+
+/* Heading decoartions */
+h1::after {
+  content: '';
+  display: inline-block;
+  border-top: 3px solid;
+  border-image: linear-gradient(to right, #648ca6ff, #f89dc0, transparent) 1;
+  width: 70%;
+  margin-left: 10px;
+  height: 5px;
 }
 
 section:nth-child(even) {
@@ -118,6 +146,7 @@ section:nth-child(even) {
   margin: 1em;
   padding: 1em;
   border: 1px solid lightgrey;
+  border-radius: 5px;
 }
 
 .project figure {
@@ -136,11 +165,15 @@ section:nth-child(even) {
 }
 
 /* About me */
+#about {
+  min-height: 330px;
+}
+
 .about img {
   height: 200px;
   width: 200px;
   object-fit: cover;
-  padding: 1em;
+  margin: 1em;
   float: left;
   border-radius: 50%;
   shape-outside: circle();
@@ -159,6 +192,7 @@ section:nth-child(even) {
   display: inline-block;
   text-align: center;
   border: 1px solid lightgrey;
+  border-radius: 5px;
   width: 9em;
   height: 10em;
   margin: 1em;
@@ -184,8 +218,12 @@ section:nth-child(even) {
 }
 
 .progress_bar .progress {
-  animation: 1s ease-out 0s 1 slideInFromLeft;
+  animation: 2s ease-out 0s 1 slideInFromLeft;
   background-color: var(--accent-pink);
+  border-bottom: 1px solid #c76a8d;
+  border-right: 1px solid #c76a8d;
+  border-top: 1px solid #ffc9de;
+  border-left: 1px solid #ffc9de;
   height: 100%;
 }
 
