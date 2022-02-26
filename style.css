@@ -36,7 +36,7 @@ header {
   top: 0;
   padding: 20px;
   color: #fff;
-  background-color: rgba(1, 0, 20, 0.8);
+  background-color: rgba(0, 0, 0, 0.8);
   backdrop-filter: blur(6px);
   align-items: center;
   justify-content: space-between;
@@ -418,5 +418,14 @@ p.copyright {
 
   nav.responsive a:hover {
     background-color: var(--gray-blue);
+  }
+
+  #contacts input,
+  #contacts label,
+  #contacts textarea {
+    display: block;
+    text-align: center;
+    margin: 0.5em auto;
+    width: 50vw;
   }
 }
