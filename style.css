@@ -7,7 +7,7 @@
 body {
   background: url('https://images.unsplash.com/photo-1454789548928-9efd52dc4031?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1480&q=80')
     no-repeat fixed center center/cover;
-  width: 80%;
+  width: 85%;
   margin: 0 auto;
   font-family: 'Raleway', sans-serif;
   --oxford-blue: #030027ff;
@@ -65,7 +65,6 @@ nav ul {
 
 nav ul li {
   display: inline-block;
-  padding: 0.5em;
 }
 
 .hero-banner {
@@ -120,39 +119,57 @@ section:nth-child(even) {
   background-color: var(--gray-blue);
 }
 
+/* Projects */
 .row {
   display: inline-block;
   width: fit-content;
 }
 
-.projects {
+.project-parent {
+  color: black;
+}
+
+.projects-wrapper {
   text-align: center;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.project {
-  display: inline-block;
-  min-height: 200px;
-  min-width: 200px;
-  background-color: #fff;
-  margin: 0.5em;
-  padding: 1em;
-  border: 1px solid lightgrey;
-  border-radius: 5px;
-}
-
-.project figure {
-  height: 140px;
-  width: 170px;
-  background-color: gray;
+.project-parent {
+  width: 300px;
+  margin: 20px;
+  height: 250px;
+  border-radius: 10px;
   overflow: hidden;
+  cursor: pointer;
+  display: inline-block;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.5);
 }
+/* 
+.project figure {
+  display: inline-block;
+  height: 170px;
+  width: 250px;
+  background-color: gray;
+} */
 
-.project figcaption {
-  font-style: italic;
-}
-
-.project figure img {
+.img-child {
+  background-size: cover;
+  transition: all 1.1s;
   height: 100%;
+}
+
+/* Zoom in on hover */
+.project-parent:hover .img-child {
+  transform: scale(1.2);
+}
+
+.img-content {
+  background-color: red;
+}
+
+figcaption {
+  font-style: italic;
 }
 
 /* About me */
@@ -363,12 +380,12 @@ p.copyright {
 
   .project {
     width: 70vw;
-    height: 250px;
+    height: 280px;
   }
 
   .project figure {
     width: 100%;
-    height: 80%;
+    height: 85%;
   }
 
   .project img {
@@ -396,6 +413,7 @@ p.copyright {
     position: absolute;
     left: 0;
     top: 85px;
+    height: 100vh;
     width: 100%;
     display: block;
   }
