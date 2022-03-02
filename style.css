@@ -7,7 +7,6 @@
 body {
   background: url('https://images.unsplash.com/photo-1454789548928-9efd52dc4031?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1480&q=80')
     no-repeat fixed center center/cover;
-  width: 85%;
   margin: 0 auto;
   font-family: 'Raleway', sans-serif;
   --oxford-blue: #030027ff;
@@ -357,10 +356,17 @@ p.copyright {
   display: none;
 }
 
+/* Desktop screens design */
+@media (min-width: 1440px) {
+  body {
+    width: 1200px;
+  }
+}
+
 /* Tablets design */
 @media (max-width: 768px) {
   body {
-    width: 90%;
+    width: 768px;
   }
 }
 
