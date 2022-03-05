@@ -64,6 +64,7 @@ nav ul {
 
 nav ul li {
   display: inline-block;
+  margin-right: 0.5em;
 }
 
 .hero-banner {
@@ -124,19 +125,14 @@ section:nth-child(even) {
   width: fit-content;
 }
 
-.project-parent {
-  color: black;
-}
-
 .projects-wrapper {
   text-align: center;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto;
 }
 
 .project-parent {
   width: 300px;
-  margin: 20px;
+  margin: 2rem;
   height: 250px;
   border-radius: 10px;
   overflow: hidden;
@@ -144,13 +140,6 @@ section:nth-child(even) {
   display: inline-block;
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.5);
 }
-/* 
-.project figure {
-  display: inline-block;
-  height: 170px;
-  width: 250px;
-  background-color: gray;
-} */
 
 .img-child {
   background-size: cover;
@@ -191,14 +180,14 @@ figcaption {
 }
 
 /* Skills */
-@keyframes slideInFromLeft {
+/* @keyframes slideInFromLeft {
   0% {
     transform: translateX(-100%);
   }
   100% {
     transform: translateX(0);
   }
-}
+} */
 
 .skills {
   text-align: center;
@@ -210,12 +199,12 @@ figcaption {
   border: 1px solid lightgrey;
   border-radius: 5px;
   width: 9em;
-  height: 10em;
-  margin: 1em;
+  height: 10rem;
+  margin: 1rem;
 }
 
 .skill p {
-  line-height: 2em;
+  line-height: 2rem;
 }
 
 .fa-brands {
@@ -310,7 +299,7 @@ form {
 
 .btn-message {
   display: inline-block;
-  padding: 1em 2em;
+  padding: 1rem 1.5rem;
   background-color: var(--accent-pink);
   border: transparent;
   border-radius: 2em;
@@ -366,12 +355,12 @@ p.copyright {
 /* Tablets design */
 @media (max-width: 768px) {
   body {
-    width: 768px;
+    max-width: 768px;
   }
 }
 
 /* Mobile phones design */
-@media (max-width: 576px) {
+@media (max-width: 530px) {
   body {
     width: 100%;
   }
@@ -384,23 +373,9 @@ p.copyright {
     font-size: 1.5em;
   }
 
-  .project {
-    width: 70vw;
-    height: 280px;
-  }
-
-  .project figure {
-    width: 100%;
-    height: 85%;
-  }
-
-  .project img {
-    min-width: 100%;
-    object-fit: cover;
-  }
   /* Menu icon */
   #menu {
-    display: block;
+    display: block !important;
     background-color: transparent;
     border: none;
     color: white;
@@ -444,12 +419,50 @@ p.copyright {
     background-color: var(--gray-blue);
   }
 
+  /* Projects */
+
+  .projects-wrapper .row {
+    width: 100%;
+  }
+
+  .projects-wrapper {
+    width: 100%;
+  }
+
+  .project-parent {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    width: 95%;
+    height: 300px;
+    margin: 1rem auto;
+  }
+
+  .img-child {
+    width: auto;
+    height: 100%;
+    background-color: slategrey;
+  }
+
+  /* Skills */
+  .skills .row {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .skill {
+    margin: 0.5rem;
+  }
+
+  /* Contacts */
+
   #contacts input,
   #contacts label,
   #contacts textarea {
     display: block;
     text-align: center;
     margin: 0.5em auto;
-    width: 50vw;
+    width: 59vw;
   }
 }

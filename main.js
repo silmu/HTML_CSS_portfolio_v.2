@@ -1,4 +1,4 @@
-const header = document.querySelector('.header');
+// const header = document.querySelector('.header');
 const goUp = document.querySelector('#go_up');
 const menu = document.querySelector('#menu');
 const nav = document.querySelector('nav');
@@ -29,11 +29,15 @@ const getToTop = () => {
 
 // Toggle between nav for mobile and web
 const openMenu = () => {
+  console.log('Button Menu is clicked');
   for (let i = 0; i < links.length; i++) {
-    console.log(`Link ${links[i]} got assigned event listener.`);
     links[i].addEventListener('click', openMenu);
   }
   //Check if responsive class exists. If it does remove it, if it doesn't add it
+  //It doesn't work because Menu button is inside the responsive class
+  //Menu opens in mobile automatically because responsive is display:block
+  //If you make it none then Menu button disappears too
+
   if (nav.classList.contains('responsive')) {
     nav.classList.remove('responsive');
   } else {
