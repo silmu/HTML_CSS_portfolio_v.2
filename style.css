@@ -42,6 +42,10 @@ header {
   z-index: 1;
 }
 
+#menu {
+  display: none;
+}
+
 #logo {
   font-family: 'JetBrains Mono', monospace;
   font-size: 1.2em;
@@ -343,24 +347,6 @@ p.copyright {
   z-index: 10;
 }
 
-#menu {
-  display: none;
-}
-
-/* Desktop screens design */
-@media (min-width: 1440px) {
-  body {
-    width: 1200px;
-  }
-}
-
-/* Tablets design */
-@media (max-width: 768px) {
-  body {
-    max-width: 768px;
-  }
-}
-
 /* GALLERY */
 .container-gallery {
   padding: 1rem;
@@ -456,6 +442,20 @@ p.copyright {
   background-size: cover;
 }
 
+/* Desktop screens design */
+@media (min-width: 1440px) {
+  body {
+    width: 1200px;
+  }
+}
+
+/* Tablets design */
+@media (max-width: 768px) {
+  body {
+    max-width: 768px;
+  }
+}
+
 /* Mobile phones design */
 @media (max-width: 530px) {
   body {
@@ -472,7 +472,7 @@ p.copyright {
 
   /* Menu icon */
   #menu {
-    display: block !important;
+    display: block;
     background-color: transparent;
     border: none;
     color: white;

@@ -1,14 +1,15 @@
-// const header = document.querySelector('.header');
+'use strict';
+
 const goUp = document.querySelector('#go_up');
 const menu = document.querySelector('#menu');
 const nav = document.querySelector('nav');
 let links = document.querySelectorAll('nav ul li a');
 const heroBanner = document.querySelector('.hero-banner');
 
-console.log(links);
-
 window.onscroll = function () {
-  scrollFunction();
+  if (heroBanner !== null) {
+    scrollFunction();
+  }
 };
 
 const scrollFunction = () => {
@@ -30,9 +31,10 @@ const getToTop = () => {
 // Toggle between nav for mobile and web
 const openMenu = () => {
   console.log('Button Menu is clicked');
-  for (let i = 0; i < links.length; i++) {
-    links[i].addEventListener('click', openMenu);
-  }
+  // for (let i = 0; i < links.length; i++) {
+  //   links[i].addEventListener('click', openMenu);
+  // }
+  links.forEach((link) => link.addEventListener('click', openMenu));
   //Check if responsive class exists. If it does remove it, if it doesn't add it
   //It doesn't work because Menu button is inside the responsive class
   //Menu opens in mobile automatically because responsive is display:block
@@ -45,5 +47,6 @@ const openMenu = () => {
   }
 };
 
+openMenu();
 menu.addEventListener('click', openMenu);
 goUp.addEventListener('click', getToTop);
