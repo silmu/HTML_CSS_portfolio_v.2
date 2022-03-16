@@ -1,5 +1,3 @@
-'use strict';
-
 const goUp = document.querySelector('#go_up');
 const menu = document.querySelector('#menu');
 const nav = document.querySelector('nav');
